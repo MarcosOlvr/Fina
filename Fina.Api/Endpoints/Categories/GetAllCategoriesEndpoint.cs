@@ -11,7 +11,7 @@ namespace Fina.Api.Endpoints.Categories
     public class GetAllCategoriesEndpoint : IEndPoint
     {
         public static void Map(IEndpointRouteBuilder app)
-            => app.MapPost("/", HandleAsync)
+            => app.MapGet("/", HandleAsync)
             .WithName("Categories: Get All")
             .WithSummary("Recupera todas as categorias")
             .WithDescription("Recupera todas as categorias")

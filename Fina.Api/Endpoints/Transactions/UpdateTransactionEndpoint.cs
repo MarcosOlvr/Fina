@@ -9,7 +9,7 @@ namespace Fina.Api.Endpoints.Transactions
     public class UpdateTransactionEndpoint : IEndPoint
     {
         public static void Map(IEndpointRouteBuilder app)
-            => app.MapPost("/{id}", HandleAsync)
+            => app.MapPut("/{id}", HandleAsync)
             .WithName("Transactions: Update")
             .WithSummary("Atualiza uma transação")
             .WithDescription("Atualiza uma transação")
