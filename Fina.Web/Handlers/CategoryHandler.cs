@@ -8,7 +8,7 @@ namespace Fina.Web.Handlers
 {
     public class CategoryHandler(IHttpClientFactory httpClientFactory) : ICategoryHandler
     {
-        private readonly HttpClient _httpClient = httpClientFactory.CreateClient();
+        private readonly HttpClient _httpClient = httpClientFactory.CreateClient(WebConfiguration.HttpClientName);
 
         public async Task<Response<Category?>> CreateAsync(CreateCategoryRequest request)
         {
